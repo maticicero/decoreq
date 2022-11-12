@@ -14,22 +14,22 @@ who need to interact with any external service through HTTP.
 Because it's meant to be easy to use, there's no setup needed. You can simply just start using it right away.
 
 ```python
-from decoreq import decoreq, json, post
+from decoreq import decoreq, json, get
 
 
 @decoreq
 @json
-@post('/login')
-def login(username: str, password: str):
-    decoreq.request.data.add(username=username, password=password)
+@get('https://www.example.com/query')
+def query(pid: int, tags: [str]):
+    decoreq.request.urlparams.add(id=pid, tags=','.join(tags))
 
     def success():
-        auth_token = decoreq.response.body['token']
-        decoreq.session.headers.add('Authorization', f'Bearer {auth_token}')
+        response = decoreq.response.body
+        # Handle response ...
 
     def error():
-        message = decoreq.response.body['message']
-        raise InvalidCredentials(message)
+        response = decoreq.response.body
+        # Handle response ...
 
     return success, error
 ```
