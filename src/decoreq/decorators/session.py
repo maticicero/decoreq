@@ -10,7 +10,7 @@ from .base import BaseDecoreqDecorator
 
 class SessionDecorator(BaseDecoreqDecorator):
     """
-    A session decorator that can be extended by other decoraters should they rely on a context with a session.
+    A session decorator that can be extended by other decorators should they rely on a context with a session.
     """
 
     def context_variables(self) -> t.Iterable[t.Tuple[ContextVar, t.Any]]:
