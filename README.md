@@ -8,7 +8,7 @@ Setup-less decorator-based friendly library for making HTTP requests.
 
 The name `decoreq` comes from merging the words `decorator` and `request`.
 
-The aim of this project is to make life easier for Python developer
+The aim of this project is to make life easier for Python developers
 who need to interact with any external service through HTTP.
 
 Because it's meant to be easy to use, there's no setup needed. You can simply just start using it right away.
