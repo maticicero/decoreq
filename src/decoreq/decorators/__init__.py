@@ -2,11 +2,11 @@
 Exposes relevant decoreq decorators
 """
 from .base import BaseDecoreqDecorator
-from .decoreq import Decoreq
 from .headers import HeadersDecorator, HeaderDecorator
+from .session import SessionDecorator
 
-decoreq = Decoreq
+session = SessionDecorator
 header = HeaderDecorator
 headers = HeadersDecorator
 
-__all__ = ['decoreq', 'header', 'headers']
+__all__ = ['session', 'header', 'headers']

@@ -20,5 +20,6 @@ class SessionDecorator(BaseDecoreqDecorator):
         :type: List[Tuple[ContextVar, Any]]
         """
         return super().context_variables() + [
-            (Session, 10)
+            # TODO: Right now the 42 is just a mock, replace with a proper Session instance
+            (Session, 42)
         ]

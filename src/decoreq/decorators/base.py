@@ -5,6 +5,7 @@ Every decoreq decorator needs to inherit from this class.
 """
 import sys
 import typing as t
+from abc import ABC
 from contextvars import ContextVar
 from functools import partial, wraps
 
@@ -14,7 +15,7 @@ _T = t.TypeVar('_T')
 _P = t.ParamSpec('_P')
 
 
-class BaseDecoreqDecorator:
+class BaseDecoreqDecorator(ABC):
     """
     Base class for decoreq decorators.
 
