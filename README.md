@@ -39,7 +39,7 @@ def login(username: str, password: str):
         # Retrieve the response JSON body
         response = decoreq.response.body
 
-        # Extract the authentication token out of the response
+        # Extract the failure reason from the response
         reason = response['reason']
 
         # Raise an exception
